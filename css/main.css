@@ -98,7 +98,7 @@ nav ul li:hover ul li {
 
 section {
     margin: 10% auto; /* centers the screen and gives a small space between the menu bar at the text */
-    width: 60%; /* keeps the content in the center of the screen */
+    width: 50%; /* keeps the content in the center of the screen */
     text-align: center; /* why not */
 }
 
