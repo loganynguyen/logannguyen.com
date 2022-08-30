@@ -1,1 +1,1 @@
-This is my handcrafted, personal website. Feel free to peruse and steal.
+This is my handcrafted, personal website. No frameworks used as of yet -- might do that soon. Feel free to peruse and steal whatever you want -- although I'm not sure if there is much going on here. Well I know that for a fact.
