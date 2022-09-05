@@ -1,0 +1,5 @@
+name: Node Continuous Integration
+
+on:
+
+jobs:
