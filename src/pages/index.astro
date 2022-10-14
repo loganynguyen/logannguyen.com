@@ -11,17 +11,33 @@ import Card from '../components/Card.astro';
 
 			<!-- links -->
 			<div class="grid grid-cols-4 gap-2">
+				
+				<!-- GITHUB -->
 				<a href="https://github.com/loganynguyen" target="_blank" class="hover:bg-purple-400"><img src="/public/github.svg" alt="github"></a>
+				
+				<!-- LINKEDIN -->
 				<a href="https://www.linkedin.com/in/loganynguyen" target="_blank" class="hover:bg-purple-400"><img src="/public/linkedin.svg" alt="linkedin"></a>
+				
 				<!-- <a href="https://www.youtube.com/channel/UC5y8kEE18eTSLvTg6ydqqWQ" target="_blank" class="hover:bg-purple-400"><img src="/public/youtube.svg" alt="youtube"></a> -->
-				<a href="#" target="_blank" class="group relative duration-300 hover:bg-purple-400"><img src="/public/spotify.svg" alt="spotify">
+				
+				<!-- SPOTIFY -->
+				<a href="https://open.spotify.com/user/sy6dbyfo3k9hj1l5l9lbdznhk?si=5e4557b762b74e93" target="_blank" class="group relative duration-300 hover:bg-purple-400"><img src="/public/spotify.svg" alt="spotify">
 					<span class="absolute hidden group-hover:flex -bottom-2 -right-3 translate-y-full w-48 px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:top-1/2  before:right-[100%] before:-translate-y-1/2 before:border-8 before:border-y-transparent before:border-l-transparent before:border-r-gray-700">
 					Show me some of your favorite playlists</span>
 				</a>
-				<a href="https://twitter.com/loganynguyen" target="_blank" class="group relative duration-300 hover:bg-purple-400"><img src="/public/twitter.svg" alt="twitter">
-					<span class="absolute hidden group-hover:flex -bottom-2 -right-3 translate-y-full w-48 px-2 py-1 bg-gray-700 rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:top-1/2  before:right-[100%] before:-translate-y-1/2 before:border-8 before:border-y-transparent before:border-l-transparent before:border-r-gray-700">
-					I don't really tweet often</span>
+
+				<!-- LAST FM -->
+				<a href="https://www.last.fm/user/loganynguyen" target="_blank" class="group relative duration-300 hover:bg-purple-400"><img src="/public/lastfm.svg" alt="lastfm">
+					<span class="absolute group-hover:flex -bottom-2 -left-[50%] ml-2 translate-y-full w-auto truncate px-2 py-1 shadow-l bg-purple-500 rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-3 before:left-[50%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-purple-400">
+					My scrobbles!</span>
 				</a>
+
+				<!-- TWITTER -->
+				<a href="https://twitter.com/loganynguyen" target="_blank" class="group relative duration-300 hover:bg-purple-400"><img src="/public/twitter.svg" alt="twitter">
+					<span class="absolute group-hover:flex -bottom-2 -right-0 ml-2 translate-y-full w-auto truncate px-2 py-1 shadow-l bg-purple-500 rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-3 before:left-[50%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-purple-400">
+						I don't really tweet often</span>
+				</a>
+
 				<!-- <a href="https://www.instagram.com/loganynguyen_/" target="_blank" class="hover:bg-purple-400"><img src="/public/instagram.svg" alt="instagram"></a> -->
 				<!-- <a href="#" target="_blank"><img src="/public/goodreads.svg" alt="goodreads"></a> -->
 				<!-- <a href="https://soundcloud.com/logan-nguyen-114618892" target="_blank" class="hover:bg-purple-400"><img src="/public/soundcloud.svg" alt="soundcloud"></a> -->
@@ -29,12 +45,14 @@ import Card from '../components/Card.astro';
 				<!-- eurobricks -->
 				<!-- quora or medium -->
 			</div>
+
 		</header>
 		
 		<!-- nav -->
-		<nav class="bg-violet-400 max-w-6xl mx-auto">
-			<div class="flex items-center space-x-5 text-white">
-				<a href="#" class="">about me</a>
+		<nav class="bg-purple-400 max-w-6xl mx-0 rounded-xl">
+			<div class="flex items-center px-5 py-2 space-x-10 text-white text-xl font-bold rounded-xl">
+				<a href="#" class="">HOME</a>
+				<a href="#" class="">BLOG</a>
 				<!-- <a href="#" class="">autobiographical archive</a> -->
 				<!-- <a href="#" class="">eclectic musings</a> -->
 				<!-- <a href="#" class="">published works</a> -->
@@ -56,10 +74,11 @@ import Card from '../components/Card.astro';
 				I'll try to share some of my thoughts and experiences on those topics here on my website when I have the time.
 			</p>
 			<p>
-				If for some reason you are interested in viewing my CV, you can find it
-				<a href="../public/lyn-cv-2022MMDD.pdf" target="_blank" class="hover:bg-purple-400"><span class="text-gradient"><strong><u>here</u></strong></span></a>.
-				Please feel free to reach out to me if you want to get in touch! My email is
-				<a href="mailto: logan@logannguyen.com" class="hover:bg-purple-400"><span class="text-gradient"><strong><u>logan@logannguyen.com</u></strong></span></a>
+				<!-- If for some reason you are interested in viewing my CV, you can find it
+				<a href="../public/lyn-cv-2022MMDD.pdf" target="_blank" class="hover:bg-purple-400"><span class="text-gradient"><strong><u>here</u></strong></span></a>.-->
+				Please feel free to reach out to me if you want to get in touch!
+				<!-- My email is
+				<a href="mailto: logan" class="hover:bg-purple-400"><span class="text-gradient"><strong><u>logan@logannguyen.com</u></strong></span></a> -->
 			</p>
 		</div>
 
@@ -72,7 +91,7 @@ import Card from '../components/Card.astro';
 				<p class="my-5">Below are a few coding projects that I have worked on in the past. More to be added soon I hope :)</p>
 				<ul role="list" class="link-card-grid mb-10">
 					<Card
-						href="#"
+						href="https://github.com/symotif/rchart"
 						title="rchart"
 						body="a modern, free, and extensible EHR for the world"
 					/>

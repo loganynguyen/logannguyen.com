@@ -2,6 +2,7 @@
 export interface Props {
 	title: string;
 	body: string;
+	//icon: Icon;
 	href: string;
 }
 
@@ -9,7 +10,7 @@ const { href, title, body } = Astro.props;
 ---
 
 <li class="link-card">
-	<a href={href}>
+	<a href={href} target="_blank" >
 		<i class="fa-regular fa-laptop-medical"></i>
 		<h2>
 			{title}
