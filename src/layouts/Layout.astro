@@ -34,8 +34,7 @@ const { title } = Astro.props;
 						</span>
 					</a>
 				</div>
-				
-				
+								
 				<!-- TWITTER -->
 				<div class="group w-7 h-7">
 					<a href="https://twitter.com/loganynguyen" target="_blank" class="group relative left-[15%] top-[15%] duration-300 hover:bg-purple-400 w-6 h-6 rounded-xl"><img src="/public/twitter.svg" alt="twitter">
@@ -44,8 +43,7 @@ const { title } = Astro.props;
 						</span>
 					</a>
 				</div>
-				
-				
+								
 				<!-- LINKEDIN -->
 				<div class="group w-7 h-7">
 					<a href="https://www.linkedin.com/in/loganynguyen" target="_blank" class="group relative left-[10%] top-[10%] duration-300 hover:bg-purple-400 w-5 h-5 rounded-xl"><img src="/public/linkedin.svg" alt="linkedin">
@@ -89,8 +87,8 @@ const { title } = Astro.props;
 		<!-- nav -->
 		<nav class="background-gradient max-w-6xl mx-0 rounded-xl">
 			<div class="flex items-center px-5 py-2 space-x-10 text-white text-xl font-bold rounded-xl">
-				<a href="#" class="hover:text-purple-200">HOME</a>
-				<a href="#" class="hover:text-purple-200">BLOG</a>
+				<a href="/" class="hover:text-purple-200">HOME</a>
+				<a href="/blog/" class="hover:text-purple-200">BLOG</a>
 				<!-- <a href="#" class="">autobiographical archive</a> -->
 				<!-- <a href="#" class="">eclectic musings</a> -->
 				<!-- <a href="#" class="">published works</a> -->
@@ -98,6 +96,10 @@ const { title } = Astro.props;
 		</nav>
 
 		<slot />
+
+		<footer class="text-center text-xs py-5">
+			<p>Copyright &copy; 2022 Logan Nguyen</p>
+		</footer>
 	</body>
 </html>
 <style>
