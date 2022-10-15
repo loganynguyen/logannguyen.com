@@ -5,15 +5,15 @@ import Card from '../components/Card.astro';
 
 <Layout title="logan nguyen">
 	<main>
-		<header class="flex justify-between items-center bg-pink-300">
+		<header class="flex justify-between items-center">
 			<!-- my name / logo -->
 			<h1 class="text-gradient">logan nguyen</h1>
 
 			<!-- links -->
-			<div class="flex gap-2 bg-green-400">
+			<div class="flex gap-2 mt-4">
 				
 				<!-- GITHUB -->
-				<div class="group bg-red-400 w-7 h-7">
+				<div class="group w-7 h-7">
 					<a href="https://github.com/loganynguyen" target="_blank" class="group relative left-[10%] top-[10%] duration-300 hover:bg-purple-400 w-5 h-5 rounded-xl"><img src="/public/github.svg" alt="github">
 						<span class="hidden absolute group-hover:flex -bottom-2 -right-6 translate-y-full w-auto truncate px-2 py-1 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
 							Let's code something!
@@ -23,7 +23,7 @@ import Card from '../components/Card.astro';
 				
 				
 				<!-- TWITTER -->
-				<div class="group bg-red-400 w-7 h-7">
+				<div class="group w-7 h-7">
 					<a href="https://twitter.com/loganynguyen" target="_blank" class="group relative left-[15%] top-[15%] duration-300 hover:bg-purple-400 w-6 h-6 rounded-xl"><img src="/public/twitter.svg" alt="twitter">
 						<span class="hidden absolute group-hover:flex -bottom-2 -right-6 translate-y-full w-auto truncate px-2 py-1 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
 							All my hot takes
@@ -33,7 +33,7 @@ import Card from '../components/Card.astro';
 				
 				
 				<!-- LINKEDIN -->
-				<div class="group bg-red-400 w-7 h-7">
+				<div class="group w-7 h-7">
 					<a href="https://www.linkedin.com/in/loganynguyen" target="_blank" class="group relative left-[10%] top-[10%] duration-300 hover:bg-purple-400 w-5 h-5 rounded-xl"><img src="/public/linkedin.svg" alt="linkedin">
 						<span class="hidden absolute group-hover:flex -bottom-2 -right-6 translate-y-full w-auto truncate px-2 py-1 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
 							My "professional" profile
@@ -44,7 +44,7 @@ import Card from '../components/Card.astro';
 				<!-- <a href="https://www.youtube.com/channel/UC5y8kEE18eTSLvTg6ydqqWQ" target="_blank" class="hover:bg-purple-400"><img src="/public/youtube.svg" alt="youtube"></a> -->
 				
 				<!-- SPOTIFY -->
-				<div class="group bg-red-400 w-7 h-7">
+				<div class="group w-7 h-7">
 					<a href="https://open.spotify.com/user/sy6dbyfo3k9hj1l5l9lbdznhk?si=5e4557b762b74e93" target="_blank" class="group relative left-[10%] top-[10%] duration-300 hover:bg-purple-400 w-5 h-5 rounded-xl"><img src="/public/spotify.svg" alt="spotify">
 						<span class="hidden absolute group-hover:flex -bottom-2 -right-6 translate-y-full w-auto truncate px-2 py-1 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
 							Let's share some playlists!
@@ -54,7 +54,7 @@ import Card from '../components/Card.astro';
 				
 
 				<!-- LAST FM -->
-				<div class="group bg-red-400 w-auto h-7 px-2">
+				<div class="group w-auto h-7 px-2">
 					<a href="https://www.last.fm/user/loganynguyen" target="_blank" class="group relative top-[10%] duration-300 hover:bg-purple-400 w-auto h-5 rounded-xl"><img src="/public/lastfm.svg" alt="lastfm">
 						<span class="hidden absolute group-hover:flex -bottom-2 -right-6 translate-y-full w-auto truncate px-2 py-1 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
 							What I'm listening to
@@ -87,7 +87,7 @@ import Card from '../components/Card.astro';
 		</nav>
 		
 		<!-- profile -->
-		<div class="my-5">
+		<div class="my-5 mx-1">
 			<p class="text-justify mt-5 mb-5">
 				<strong>Hi there!</strong> Welcome to my little corner of the internet.<br><br>
 				Since you're here, it's possible that you might be a <i>slightly</i> interested as to who I am.
@@ -204,10 +204,10 @@ import Card from '../components/Card.astro';
 	@keyframes pulse {
 		0%,
 		100% {
-			background-position-y: 0%;
+			background-position-y: 80%;
 		}
 		50% {
-			background-position-y: 80%;
+			background-position-y: 0%;
 		}
 	}
 
