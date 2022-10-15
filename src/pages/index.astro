@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+import ResearchCard from '../components/ResearchCard.astro';
+
 ---
 
 <Layout title="logan nguyen">
@@ -16,7 +18,7 @@ import Card from '../components/Card.astro';
 				<div class="group w-7 h-7">
 					<a href="https://github.com/loganynguyen" target="_blank" class="group relative left-[10%] top-[10%] duration-300 hover:bg-purple-400 w-5 h-5 rounded-xl"><img src="/public/github.svg" alt="github">
 						<span class="hidden absolute group-hover:flex -bottom-2 -right-6 translate-y-full w-auto truncate px-2 py-1 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
-							Let's code something!
+							create with me!
 						</span>
 					</a>
 				</div>
@@ -26,7 +28,7 @@ import Card from '../components/Card.astro';
 				<div class="group w-7 h-7">
 					<a href="https://twitter.com/loganynguyen" target="_blank" class="group relative left-[15%] top-[15%] duration-300 hover:bg-purple-400 w-6 h-6 rounded-xl"><img src="/public/twitter.svg" alt="twitter">
 						<span class="hidden absolute group-hover:flex -bottom-2 -right-6 translate-y-full w-auto truncate px-2 py-1 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
-							All my hot takes
+							my hot takes
 						</span>
 					</a>
 				</div>
@@ -36,7 +38,7 @@ import Card from '../components/Card.astro';
 				<div class="group w-7 h-7">
 					<a href="https://www.linkedin.com/in/loganynguyen" target="_blank" class="group relative left-[10%] top-[10%] duration-300 hover:bg-purple-400 w-5 h-5 rounded-xl"><img src="/public/linkedin.svg" alt="linkedin">
 						<span class="hidden absolute group-hover:flex -bottom-2 -right-6 translate-y-full w-auto truncate px-2 py-1 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
-							My "professional" profile
+							my "professional" profile
 						</span>
 					</a>
 				</div>
@@ -47,7 +49,7 @@ import Card from '../components/Card.astro';
 				<div class="group w-7 h-7">
 					<a href="https://open.spotify.com/user/sy6dbyfo3k9hj1l5l9lbdznhk?si=5e4557b762b74e93" target="_blank" class="group relative left-[10%] top-[10%] duration-300 hover:bg-purple-400 w-5 h-5 rounded-xl"><img src="/public/spotify.svg" alt="spotify">
 						<span class="hidden absolute group-hover:flex -bottom-2 -right-6 translate-y-full w-auto truncate px-2 py-1 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
-							Let's share some playlists!
+							let's share some playlists!
 						</span>
 					</a>
 				</div>
@@ -57,7 +59,7 @@ import Card from '../components/Card.astro';
 				<div class="group w-auto h-7 px-2">
 					<a href="https://www.last.fm/user/loganynguyen" target="_blank" class="group relative top-[10%] duration-300 hover:bg-purple-400 w-auto h-5 rounded-xl"><img src="/public/lastfm.svg" alt="lastfm">
 						<span class="hidden absolute group-hover:flex -bottom-2 -right-6 translate-y-full w-auto truncate px-2 py-1 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
-							What I'm listening to
+							what I'm listening to
 						</span>
 					</a>
 				</div>
@@ -86,12 +88,12 @@ import Card from '../components/Card.astro';
 		<!-- profile -->
 		<div class="my-5 mx-1">
 			<p class="text-justify mt-5 mb-5">
-				<strong>Hi there!</strong> Welcome to my little corner of the internet.<br><br>
+				<strong>👋 Hi there!</strong> Welcome to my little corner of the internet.<br><br>
 				Since you're here, it's possible that you might be a <i>slightly</i> interested as to who I am.
 				Yes, my name is in fact Logan Nguyen. I live in the United States and I am currently a medical student at Wayne State University School of Medicine.
 				Previously I studied both Biochemistry and Computer Science as an undergradate (also at WSU).
 				In my spare time, I've been working on an open source electronic medical record called
-				<a href="https://github.com/symotif/rchart" target="_blank" class="hover:bg-purple-400"><span class="text-gradient"><strong><u>rchart</u></strong></span></a>.
+				<a href="https://github.com/symotif/rchart" target="_blank" class="hover:bg-purple-200"><span class="text-gradient"><strong><u>rchart</u></strong></span></a>.
 				It's currently quite solidly in its early stages of development, but please feel free to check it out and considering contributing!
 				I really do appreciate any help and/or feedback.
 				Besides medicine and coding, I honestly feel like I have too many interests, yet throughout the years I have always enjoyed music, nature, making things, and stories of all kinds.
@@ -112,21 +114,21 @@ import Card from '../components/Card.astro';
 			<!-- projects -->
 			<div>
 				<h2><span class="text-gradient text-3xl">Projects</span></h2>
-				<p class="mb-7 mt-2">Below are a few coding projects that I have worked on in the past. More to be added soon I hope :)</p>
+				<p class="mb-7 mt-2">Below are a few coding projects that I have worked on in the past.</p>
 				<ul role="list" class="link-card-grid mb-10">
-					<Card
+					<ProjectCard
 						href="https://github.com/symotif/rchart"
 						title="rchart"
 						body="a modern, free, and extensible EHR for the world"
 						emoji="🏥"
 					/>
-					<Card
+					<ProjectCard
 						href="https://github.com/loganynguyen/LANParty"
 						title="LAN Party"
 						body="A web app for gamers to meet up for in person parties. Created for my software engineering class project."
 						emoji="🎮"
 					/>
-					<Card
+					<ProjectCard
 						href="https://play.google.com/store/apps/details?id=www.acuitii.life&hl=en_US&gl=US"
 						title="Acuitii"
 						body="An app to gamify studying. Among other things, I worked on the flashcard review portion of the application for my senior project."
@@ -138,24 +140,27 @@ import Card from '../components/Card.astro';
 			<!-- research -->
 			<div>
 				<h2><span class="text-gradient text-3xl">Research</span></h2>
-				<p class="mb-7 mt-2">In the past I have been involved with a few research projects. Here are a few of my publications.</p>
+				<p class="mb-7 mt-2">These are my peer-reviewed scientific publications. In the near future I hope to continue.</p>
 				<ul role="list" class="link-card-grid mb-10">
-					<Card
+					<ResearchCard
 						href="https://www.mdpi.com/2079-6382/10/7/880"
 						title=" In Vitro Synergy of Colistin in Combination with Meropenem or Tigecycline against Carbapenem-Resistant Acinetobacter baumannii "
-						body="Jacinda C Abdul-Mutakabbir, Juwon Yim, Logan Nguyen, Philip T Maassen, Kyle Stamper, Zain Shiekh, Razieh Kebriaei, Ryan K Shields, Mariana Castanheira, Keith S Kaye, Michael J Rybak. Antibiotics, July 2021."
+						authors="Jacinda C Abdul-Mutakabbir, Juwon Yim, Logan Nguyen, Philip T Maassen, Kyle Stamper, Zain Shiekh, Razieh Kebriaei, Ryan K Shields, Mariana Castanheira, Keith S Kaye, Michael J Rybak."
+						journal="Antibiotics, July 2021."
 						emoji="🦠"
 					/>
-					<Card
+					<ResearchCard
 						href="https://journals.asm.org/doi/10.1128/AAC.02646-20"
 						title=" In Vitro Antibacterial Activity of Cefiderocol against Multidrug-Resistant Acinetobacter baumannii"
-						body="Jacinda C Abdul-Mutakabbir, Logan Nguyen, Philip T Maassen, Kyle C Stamper, Razieh Kebriaei, Keith S Kaye, Mariana Castanheira, Michael J Rybak. Antimicrobial Agents and Chemotherapy, August 2021."
+						authors="Jacinda C Abdul-Mutakabbir, Logan Nguyen, Philip T Maassen, Kyle C Stamper, Razieh Kebriaei, Keith S Kaye, Mariana Castanheira, Michael J Rybak."
+						journal="Antimicrobial Agents and Chemotherapy, August 2021."
 						emoji="🦠"
 					/>
-					<Card
+					<ResearchCard
 						href="https://academic.oup.com/jac/article/75/10/2894/5863533?login=false"
 						title="Combinations of (lipo)glycopeptides with β-lactams against MRSA: susceptibility insights"
-						body="Razieh Kebriaei, Seth A Rice, Nivedita B Singh, Kyle C Stamper, Logan Nguyen, Zain Sheikh, Michael J Rybak. Journal of Antimicrobial Chemotherapy, June 2020."
+						authors="Razieh Kebriaei, Seth A Rice, Nivedita B Singh, Kyle C Stamper, Logan Nguyen, Zain Sheikh, Michael J Rybak."
+						journal="Journal of Antimicrobial Chemotherapy, June 2020."
 						emoji="🧫"
 					/>
 				</ul>
