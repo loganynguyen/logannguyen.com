@@ -17,7 +17,89 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
+
+		<!-- header -->
+		<header class="flex justify-between items-center">
+			<!-- my name / logo -->
+			<h1 class="text-gradient break-all">logan nguyen</h1>
+
+			<!-- links -->
+			<div class="grid grid-cols-3 md:grid-cols-5 mt-4">
+				
+				<!-- GITHUB -->
+				<div class="group w-7 h-7">
+					<a href="https://github.com/loganynguyen" target="_blank" class="group relative left-[10%] top-[10%] duration-300 hover:bg-purple-400 w-5 h-5 rounded-xl"><img src="/public/github.svg" alt="github">
+						<span class="hidden absolute group-hover:flex -bottom-2 -right-6 translate-y-full w-auto truncate px-2 py-1 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
+							create with me!
+						</span>
+					</a>
+				</div>
+								
+				<!-- TWITTER -->
+				<div class="group w-7 h-7">
+					<a href="https://twitter.com/loganynguyen" target="_blank" class="group relative left-[15%] top-[15%] duration-300 hover:bg-purple-400 w-6 h-6 rounded-xl"><img src="/public/twitter.svg" alt="twitter">
+						<span class="hidden absolute group-hover:flex -bottom-2 -right-6 translate-y-full w-auto truncate px-2 py-1 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
+							my hot takes
+						</span>
+					</a>
+				</div>
+								
+				<!-- LINKEDIN -->
+				<div class="group w-7 h-7">
+					<a href="https://www.linkedin.com/in/loganynguyen" target="_blank" class="group relative left-[10%] top-[10%] duration-300 hover:bg-purple-400 w-5 h-5 rounded-xl"><img src="/public/linkedin.svg" alt="linkedin">
+						<span class="hidden absolute group-hover:flex -bottom-2 -right-6 translate-y-full w-auto truncate px-2 py-1 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
+							my "professional" profile
+						</span>
+					</a>
+				</div>
+				
+				<!-- <a href="https://www.youtube.com/channel/UC5y8kEE18eTSLvTg6ydqqWQ" target="_blank" class="hover:bg-purple-400"><img src="/public/youtube.svg" alt="youtube"></a> -->
+				
+				<!-- SPOTIFY -->
+				<div class="group w-7 h-7">
+					<a href="https://open.spotify.com/user/sy6dbyfo3k9hj1l5l9lbdznhk?si=5e4557b762b74e93" target="_blank" class="group relative left-[10%] top-[10%] duration-300 hover:bg-purple-400 w-5 h-5 rounded-xl"><img src="/public/spotify.svg" alt="spotify">
+						<span class="hidden absolute group-hover:flex -bottom-2 -right-6 translate-y-full w-auto truncate px-2 py-1 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
+							let's share some playlists!
+						</span>
+					</a>
+				</div>
+				
+
+				<!-- LAST FM -->
+				<div class="group w-auto h-7 px-2">
+					<a href="https://www.last.fm/user/loganynguyen" target="_blank" class="group relative top-[10%] duration-300 hover:bg-purple-400 w-auto h-5 rounded-xl"><img src="/public/lastfm.svg" alt="lastfm">
+						<span class="hidden absolute group-hover:flex -bottom-2 -right-6 translate-y-full w-auto truncate px-2 py-1 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
+							what I'm listening to
+						</span>
+					</a>
+				</div>
+				
+				<!-- <a href="https://www.instagram.com/loganynguyen_/" target="_blank" class="hover:bg-purple-400"><img src="/public/instagram.svg" alt="instagram"></a> -->
+				<!-- <a href="#" target="_blank"><img src="/public/goodreads.svg" alt="goodreads"></a> -->
+				<!-- <a href="https://soundcloud.com/logan-nguyen-114618892" target="_blank" class="hover:bg-purple-400"><img src="/public/soundcloud.svg" alt="soundcloud"></a> -->
+				<!-- steam -->
+				<!-- eurobricks -->
+				<!-- quora or medium -->
+			</div>
+
+		</header>
+		
+		<!-- nav -->
+		<nav class="background-gradient max-w-6xl mx-0 rounded-xl">
+			<div class="flex items-center px-5 py-2 space-x-10 text-white text-xl font-bold rounded-xl">
+				<a href="/" class="hover:text-purple-200 text-sm">HOME</a>
+				<a href="/blog/" class="hover:text-purple-200 text-sm">BLOG</a>
+				<!-- <a href="#" class="">autobiographical archive</a> -->
+				<!-- <a href="#" class="">eclectic musings</a> -->
+				<!-- <a href="#" class="">published works</a> -->
+			</div>
+		</nav>
+
 		<slot />
+
+		<footer class="text-center text-xs py-5">
+			<p>Copyright &copy; 2022 Logan Nguyen</p>
+		</footer>
 	</body>
 </html>
 <style>
@@ -39,13 +121,18 @@ const { title } = Astro.props;
 	}
 
 	body {
-		margin: 0;
+		margin: auto;
+		padding: 1em;
+		max-width: 85ch;
 	}
 
-
+	h1 {
+		margin: 0.5rem 0;
+	}
 </style>
 
 <style is:global>
+
 	h1 {
 		font-size: var(--font-size-xl);
 	}
@@ -57,5 +144,49 @@ const { title } = Astro.props;
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
+	}
+
+	/* styles for the gradients */
+	:root {
+		--text-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+		--background-gradient: linear-gradient(270deg, #da62c4, #4f39fa);
+	}
+
+	.text-gradient {
+		font-weight: 900;
+		background-image: var(--text-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 100% 200%;
+		background-position-y: 100%;
+		border-radius: 0.4rem;
+		animation: pulse 7s ease-in-out infinite;
+	}
+
+	.background-gradient {
+		background-image: var(--background-gradient);
+		background-size: 200%;
+		background-position-x: 0%;
+		animation: background-pulse 7s ease-in-out infinite;
+	}
+
+	@keyframes pulse {
+		0%,
+		100% {
+			background-position-y: 80%;
+		}
+		50% {
+			background-position-y: 0%;
+		}
+	}
+
+	@keyframes background-pulse {
+		0%,
+		100% {
+			background-position-x: 0%;
+		}
+		50% {
+			background-position-x: 80%;
+		}
 	}
 </style>
