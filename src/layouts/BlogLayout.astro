@@ -1,0 +1,60 @@
+---
+import Layout from "./Layout.astro";
+import type { MarkdownLayoutProps } from 'astro';
+
+type Props = MarkdownLayoutProps<{
+  title: string;
+  description?: string;
+  date: string | Date;
+  tags: string[];
+}>;
+
+const { frontmatter } = Astro.props;
+const { title, description, date, tags } = frontmatter;
+
+// UTC-safe date string
+let dateStr = "Unknown date";
+if (date) {
+  dateStr = new Date(`${date}T00:00`).toLocaleDateString(undefined, {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+}
+
+---
+
+<Layout title={title}>
+  <main class="p-4 mx-auto">
+    <div class="flex justify-between mt-8 mb-2">
+
+      <!-- title -->
+      <p class="text-4xl font-bold">{title}</p>
+      
+      <!-- Tags -->
+      <div class="flex mt-3">
+        {tags && tags.length > 0 && (
+        <div class="flex flex-wrap gap-2">
+          {tags.map(tag => (
+            <a href={`/blog/tag/${tag.toLowerCase()}`} class="inline-block bg-blue-600 text-white text-xs px-[8px] pt-[4px] pb-[1px] rounded-xl hover:bg-blue-500 border-blue-600 border-2 hover:border-blue-600 transition-colors duration-200">
+              {tag}
+            </a>
+          ))}
+        </div>
+        )}
+      </div>
+    </div>
+
+    <div class="flex justify-between text-l">
+      <p>{description}</p>
+      <p>{dateStr}</p>
+    </div>
+
+    <hr><hr>
+    <br><br>
+    
+    <slot /> <!-- post content will render here -->
+
+    <br>
+  </main>
+</Layout>

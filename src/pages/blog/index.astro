@@ -1,13 +1,40 @@
 ---
 import Layout from '../../layouts/Layout.astro';
+import PostCard from "../../components/PostCard.astro";
 
+interface Frontmatter {
+  title: string;
+  description: string;
+  date: string | Date;
+}
+
+// Tell TypeScript what kind of module we’re importing
+const postImporters = import.meta.glob<{ frontmatter: Frontmatter; url: string }>("./*.md");
+
+const posts = await Promise.all(
+    Object.values(postImporters).map(async (importer) => {
+        const post = await importer();
+        return {
+        url: post.url,
+        ...post.frontmatter,
+        };
+    })
+);
+// Sort by newest
+posts.sort(
+    (a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf()
+);
 ---
 
 <Layout title="logan nguyen">
-	<main>
-        <p class="text-center mt-5">🚧 Under construction at the moment!</p>
-    </main>
+    <ul>
+        {posts.map((post) => (
+        <PostCard
+            title={post.title}
+            description={post.description}
+            link={post.url}
+            date={post.date}
+        />
+        ))}
+    </ul>
 </Layout>
-
-<style>
-</style>

@@ -1,0 +1,60 @@
+---
+interface Props {
+    title: string;
+    description: string;
+    link: string;
+    date: string | Date;
+}
+
+const { title, description, link, date} = Astro.props as Props;
+
+// UTC-safe local date
+const dateObj = date ? new Date(`${date}T00:00`) : undefined;
+const dateStr = dateObj
+    ? dateObj.toLocaleDateString(undefined, {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+    })
+    : "Unknown date";
+---
+
+<li class="my-4">
+    <a
+        href={link}
+        class="relative block rounded-xl overflow-hidden transition-colors duration-300 group"
+    >
+    <!-- Hover gradient fill with pulsing energy -->
+    <div
+        class="absolute inset-0 bg-gradient-to-r from-blue-800 to-green-300 scale-x-0 origin-left transition-transform duration-500 ease-out group-hover:scale-x-100 z-0 animate-gradient-pulse"
+    ></div>
+
+    <!-- Content -->
+    <div class="relative z-10 flex justify-between items-center p-4">
+        <div>
+            <h2 class="text-lg font-semibold text-gray-900 group-hover:text-white transition-colors duration-300">{title}</h2>
+            <p class="text-sm text-gray-700 group-hover:text-white transition-colors duration-300">{description}</p>
+        </div>
+        <span class="text-sm text-gray-500 group-hover:text-gray-600 transition-colors duration-300 ml-4 whitespace-nowrap">{dateStr}</span>
+    </div>
+
+        <!-- Border color transition -->
+        <span class="absolute inset-0 border-2 border-gray-300 group-hover:border-none rounded-xl pointer-events-none transition-colors duration-300"></span>
+    </a>
+</li>
+
+<style>
+    @keyframes gradientPulse {
+        0%, 100% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 70% 50%;
+        }
+    }
+
+    .animate-gradient-pulse {
+        background-size: 120% 120%;
+        animation: gradientPulse 2s ease-in-out infinite;
+    }
+</style>
