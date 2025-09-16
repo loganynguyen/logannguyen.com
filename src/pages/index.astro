@@ -9,8 +9,8 @@ import ResearchCard from '../components/ResearchCard.astro';
 	<main>	
 		<!-- profile -->
 		<div class="my-5 mx-1">
-			<div class="flex flex-col sm:flex-row space-x-8">
-				<p class="text-justify mt-5 mb-5">
+			<div class="flex flex-col sm:flex-row space-x-8 rounded-xl">
+				<p class="text-justify mt-1 mb-5">
 					<strong>👋 Hi there! </strong>Welcome to my handcrafted website — my little corner of the internet!<br><br>
 					Here, when I have the time, I'll try and share some of my thoughts on what I'm passionate 
 					about — but no promises! I'll also link to what I am working on, whether that be software, music, research, etc.
@@ -25,7 +25,7 @@ import ResearchCard from '../components/ResearchCard.astro';
 					Please feel free to reach out 🙂
 				</p>
 				
-				<img src="./src/assets/headshot.jpg" alt="My headshot" class="max-w-xs sm:max-w-full h-auto rounded-xl">
+				<img src="./src/assets/headshot.jpg" alt="My headshot" class="max-w-xs h-auto rounded-xl object-contain">
 			</div>
 			
 			<p>
@@ -37,7 +37,7 @@ import ResearchCard from '../components/ResearchCard.astro';
 		</div>
 
 		<!-- large flexbox -->
-		<div class="grid md:grid-cols-2 xs:grid-cols-1 gap-5 mt-7">
+		<div class="grid md:grid-cols-2 xs:grid-cols-1 gap-5 mt-10">
 
 			<!-- projects -->
 			<div>
