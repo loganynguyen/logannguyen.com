@@ -1,5 +1,9 @@
 ---
 import "../styles/global.css";
+import doximityIcon from "../assets/doximity.svg";
+import githubIcon from "../assets/github.svg";
+import twitterIcon from "../assets/twitter.svg";
+import linkedinIcon from "../assets/linkedin.svg";
 
 export interface Props {
     title: string;
@@ -27,33 +31,25 @@ const { title } = Astro.props;
             <h1 class="text-gradient break-all sm:relative sm:group">logan nguyen</h1>
 
             <!-- links -->
-            <div class="grid grid-cols-3 sm:grid-cols-5 mt-8 gap-2 justify-items-end">
+            <div class="flex gap-3 mt-8">
                 <!-- DOXIMITY -->
-                <div class="group w-[27px] h-[27px]">
-                    <a href="https://www.doximity.com/pub/logan-nguyen-md"
-                        target="_blank"
-                        class="group relative right-[40%] bottom-[5%] pr-2 rounded-xl">
-                        <img src="./../src/assets/doximity.svg" alt="Doximity" />
-                        <span class="hidden absolute group-hover:flex bottom-3 -right-4 translate-y-full w-auto truncate px-3 py-2 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
-                            find me on Doximity
-                        </span>
+                <div class="group relative w-7 h-7">
+                    <a href="https://www.doximity.com/pub/logan-nguyen-md" target="_blank">
+                        <img src={doximityIcon.src} alt="Doximity" class="w-full h-full" />
                     </a>
-                </div>
-                
-                <!-- GITHUB -->
-                <div class="w-7 h-7">
-                    <a href="https://github.com/loganynguyen"
-                        target="_blank"
-                        class="group relative left-[5%] top-[10%] w-5 h-5 rounded-xl">
-                        <img src="./../src/assets/github.svg" alt="Github" />
-                        <span class="hidden absolute group-hover:flex bottom-3 -right-4 translate-y-full w-auto truncate px-3 py-2 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
-                            my public code
-                        </span>
-                    </a>
+                    <span class="social-tooltip">Find me on Doximity</span>
                 </div>
 
-                <!-- SPOTIFY -->
-                <div class="group w-7 h-7">
+                <!-- GITHUB -->
+                <div class="group relative w-7 h-7">
+                    <a href="https://github.com/loganynguyen" target="_blank">
+                        <img src={githubIcon.src} alt="Github" class="w-full h-full" />
+                    </a>
+                    <span class="social-tooltip">My public code</span>
+                </div>
+
+                <!-- ARTIST SPOTIFY -->
+                <!-- <div class="group w-7 h-7">
                     <a href="https://open.spotify.com/user/sy6dbyfo3k9hj1l5l9lbdznhk?si=5e4557b762b74e93"
                         target="_blank"
                         class="group relative left-[10%] top-[10%] duration-300 w-5 h-5 rounded-xl">
@@ -62,33 +58,9 @@ const { title } = Astro.props;
                             listen to my music here
                         </span>
                     </a>
-                </div>
+                </div> -->
 
-                <!-- TWITTER -->
-                <div class="group w-7 h-7">
-                    <a href="https://twitter.com/loganynguyen"
-                        target="_blank"
-                        class="group relative left-[15%] top-[15%] duration-300 w-6 h-6 rounded-xl">
-                        <img src="./../src/assets/twitter.svg" alt="twitter" />
-                        <span class="hidden absolute group-hover:flex bottom-3 -right-4 translate-y-full w-auto truncate px-3 py-2 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
-                            lukewarm takes and updates
-                        </span>
-                    </a>
-                </div>
-
-                <!-- LINKEDIN -->
-                <div class="group w-7 h-7">
-                    <a href="https://www.linkedin.com/in/loganynguyen"
-                        target="_blank"
-                        class="group relative left-[10%] top-[10%] duration-300 w-5 h-5 rounded-xl">
-                        <img src="./../src/assets/linkedin.svg" alt="LinkedIn" />
-                        <span class="hidden absolute group-hover:flex bottom-3 -right-4 translate-y-full w-auto truncate px-3 py-2 shadow-xl background-gradient border-2 border-white rounded-lg text-center text-white text-sm before:content-[''] before:absolute before:-top-4 before:left-[90%] before:-translate-x-1/2 before:border-8 before:border-l-transparent before:border-r-transparent before:border-t-transparent before:border-b-white">
-                            let's get down to business
-                        </span>
-                    </a>
-                </div>
-
-                <!-- SPOTIFY -->
+                <!-- PERSONAL SPOTIFY -->
                 <!-- <div class="group w-7 h-7">
                     <a
                         href="https://open.spotify.com/user/sy6dbyfo3k9hj1l5l9lbdznhk?si=5e4557b762b74e93"
@@ -103,6 +75,7 @@ const { title } = Astro.props;
                     </a>
                 </div> -->
 
+                <!-- YOUTUBE -->
                 <!-- <a href="https://www.youtube.com/channel/UC5y8kEE18eTSLvTg6ydqqWQ" target="_blank" class="hover:bg-purple-400"><img src="/public/youtube.svg" alt="youtube"></a> -->
 
                 <!-- LAST FM -->
@@ -120,30 +93,44 @@ const { title } = Astro.props;
                     </a>
                 </div> -->
 
+                <!-- INSTAGRAM -->
                 <!-- <a href="https://www.instagram.com/loganynguyen_/" target="_blank" class="hover:bg-purple-400"><img src="/public/instagram.svg" alt="instagram"></a> -->
                 <!-- <a href="#" target="_blank"><img src="/public/goodreads.svg" alt="goodreads"></a> -->
                 <!-- <a href="https://soundcloud.com/logan-nguyen-114618892" target="_blank" class="hover:bg-purple-400"><img src="/public/soundcloud.svg" alt="soundcloud"></a> -->
+
+                <!-- TWITTER -->
+                <div class="group relative w-7 h-7">
+                    <a href="https://twitter.com/loganynguyen" target="_blank">
+                        <img src={twitterIcon.src} alt="Twitter" class="w-full h-full" />
+                    </a>
+                    <span class="social-tooltip">Lukewarm takes and updates</span>
+                </div>
+
+                <!-- LINKEDIN -->
+                <div class="group relative w-7 h-7">
+                    <a href="https://www.linkedin.com/in/loganynguyen" target="_blank">
+                        <img src={linkedinIcon.src} alt="LinkedIn" class="w-full h-full" />
+                    </a>
+                    <span class="social-tooltip">Link with me on LinkedIn</span>
+                </div>
             </div>
         </header>
 
         <!-- nav -->
         <nav class="background-gradient max-w-6xl mx-0 rounded-xl mb-10">
             <div class="flex items-center px-5 py-2 space-x-10 text-white text-xl font-bold rounded-xl">
-                <a href="/" class="hover:text-purple-200 text-sm">HOME</a>
-                <a href="/blog/" class="hover:text-purple-200 text-sm">BLOG</a>
-				<a href="/contact/" class="hover:text-purple-200 text-sm">CONTACT</a>
+                <a href="/" class="hover:text-white/70 text-sm">HOME</a>
+                <a href="/blog/" class="hover:text-white/70 text-sm">BLOG</a>
+                <a href="/contact/" class="hover:text-white/70 text-sm">CONTACT</a>
                 <!-- <a href="#" class="">autobiographical archive</a> -->
                 <!-- <a href="#" class="">published works</a> -->
-                
-                <!-- Hover text display -->
-                <div class="hover-text relative left-1/2 text-white text-sm before:content-['']"></div>
             </div>
         </nav>
 
         <slot />
 
         <footer class="text-center text-xs py-5">
-            <p>Copyright &copy; 2025 Logan Nguyen</p>
+            <p>Copyright &copy; 2026 Logan Nguyen</p>
         </footer>
         <style>
             :root {
@@ -190,10 +177,10 @@ const { title } = Astro.props;
 
             /* styles for the gradients */
             :root {
-                --text-gradient: linear-gradient(0deg, #193cb8, #7bf1a8);
-                --background-gradient: linear-gradient(270deg, #7bf1a8, #193cb8);
+                --text-gradient: linear-gradient(0deg, #193cb8, #87ceeb);
+                --background-gradient: linear-gradient(270deg, #87ceeb, #193cb8);
             }
-            /* old colors: purple (4f39fa), pink (da62c4) */
+            /* light blue: #87ceeb (sky blue like shirt) */
 
             .text-gradient {
                 font-weight: 900;
@@ -233,17 +220,32 @@ const { title } = Astro.props;
                 }
             }
 
-            /* Show different text depending on which icon is hovered */
-            .icon.github:hover ~ .hover-text::after {
-                content: "my public code";
+            /* Social icon tooltips - positioned bottom left */
+            .social-tooltip {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                margin-top: 0.5rem;
+                padding: 0.5rem 0.75rem;
+                background-image: var(--background-gradient);
+                background-size: 200%;
+                border: 2px solid white;
+                border-radius: 0.5rem;
+                color: white;
+                font-size: 0.875rem;
+                white-space: nowrap;
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-4px);
+                transition: opacity 0.2s, transform 0.2s, visibility 0.2s;
+                box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+                z-index: 50;
             }
 
-            .icon.linkedin:hover ~ .hover-text::before {
-                content: "let's get down to business";
-            }
-
-            .icon.doximity:hover ~ .hover-text::before {
-                content: "find me on Doximity";
+            .group:hover .social-tooltip {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
             }
         </style>
     </body>

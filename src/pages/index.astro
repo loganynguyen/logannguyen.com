@@ -16,7 +16,7 @@ import ResearchCard from '../components/ResearchCard.astro';
 					about — but no promises! I'll also link to what I am working on, whether that be software, music, research, etc.
 					<br><br>
 					Currently I am a psychiatry resident physician, but in my spare time, I've been working on an open source electronic medical record that I call
-					<a href="https://github.com/symotif/rchart" target="_blank" class="hover:bg-purple-200"><span class="text-gradient"><strong><u>rchart</u></strong></span></a>.
+					<a href="https://github.com/symotif/rchart" target="_blank" class="hover:bg-green-200"><span class="text-gradient"><strong><u>rchart</u></strong></span></a>.
 					It's currently quite solidly in its early stages of development, yet please feel free to check it out and also considering contributing.
 					I would really appreciate any feedback or help with the project — there are also many things that do not require coding!
 
@@ -99,49 +99,6 @@ import ResearchCard from '../components/ResearchCard.astro';
 </Layout>
 
 <style>
-	:root {
-		--text-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
-		--background-gradient: linear-gradient(270deg, #da62c4, #4f39fa);
-	}
-
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--text-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 7s ease-in-out infinite;
-	}
-
-	.background-gradient {
-		background-image: var(--background-gradient);
-		background-size: 200%;
-		background-position-x: 0%;
-		animation: background-pulse 7s ease-in-out infinite;
-	}
-
-	@keyframes pulse {
-		0%,
-		100% {
-			background-position-y: 80%;
-		}
-		50% {
-			background-position-y: 0%;
-		}
-	}
-
-	@keyframes background-pulse {
-		0%,
-		100% {
-			background-position-x: 0%;
-		}
-		50% {
-			background-position-x: 80%;
-		}
-	}
-
 	.link-card-grid {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));

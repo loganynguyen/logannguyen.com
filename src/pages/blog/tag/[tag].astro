@@ -1,0 +1,72 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import PostCard from "../../../components/PostCard.astro";
+
+interface Frontmatter {
+  title: string;
+  description: string;
+  date: string | Date;
+  tags: string[];
+}
+
+export async function getStaticPaths() {
+  const postImporters = import.meta.glob<{ frontmatter: Frontmatter; url: string }>("../*.md");
+
+  const posts = await Promise.all(
+    Object.values(postImporters).map(async (importer) => {
+      const post = await importer();
+      return {
+        url: post.url,
+        ...post.frontmatter,
+      };
+    })
+  );
+
+  // Collect all unique tags
+  const allTags = new Set<string>();
+  posts.forEach(post => {
+    post.tags?.forEach(tag => allTags.add(tag.toLowerCase()));
+  });
+
+  // Generate a path for each tag
+  return Array.from(allTags).map(tag => ({
+    params: { tag },
+    props: {
+      tag,
+      posts: posts.filter(post =>
+        post.tags?.map(t => t.toLowerCase()).includes(tag)
+      ).sort((a, b) => new Date(b.date).valueOf() - new Date(a.date).valueOf())
+    }
+  }));
+}
+
+const { tag, posts } = Astro.props;
+---
+
+<Layout title={`Posts tagged "${tag}"`}>
+  <div class="mb-6">
+    <a href="/blog/" class="text-green-700 hover:underline">&larr; All posts</a>
+  </div>
+
+  <h2 class="text-2xl font-bold mb-4">
+    Posts tagged: <span class="inline-block bg-green-700 text-white text-xl px-3 py-1 rounded-xl">{tag}</span>
+  </h2>
+
+  <ul>
+    {posts.map((post) => (
+      <PostCard
+        title={post.title}
+        description={post.description}
+        link={post.url}
+        date={post.date}
+      />
+    ))}
+  </ul>
+</Layout>
+
+<style>
+  :root {
+    --text-gradient: linear-gradient(0deg, #166534, #8b9a6b);
+    --background-gradient: linear-gradient(270deg, #8b9a6b, #166534);
+  }
+</style>

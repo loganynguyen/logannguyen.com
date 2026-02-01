@@ -15,6 +15,7 @@ html {
     font-size: var(--font-size-base);
     color: var(--color-text);
     background-color: var(--color-bg);
+    overflow-y: scroll; /* Always show scrollbar to prevent layout shift */
 }
 
 body {

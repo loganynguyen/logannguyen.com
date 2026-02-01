@@ -1,16 +1,24 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 
+// Get your access key from https://web3forms.com/
+const WEB3FORMS_ACCESS_KEY = import.meta.env.WEB3FORMS_ACCESS_KEY;
 ---
 
-<Layout title="blog">
+<Layout title="contact">
     <div class="not-content mx-auto my-3 rounded-3xl border border-gray-200 bg-gray-100 p-6 text-gray-600 md:p-10">
-        <form id="contact-form" name="contact form" class="mt-4 flex flex-col gap-3">
-            <input type="hidden" name="form-name" value="contact" />
-            
-            <!-- honeypot field to catch bots. Purposefully mispelled "email" as "emai" to better trick bots -->
-            <label for="emai" class="sr-only">Real users skip this field</label>
-            <input id="emai" type="text" name="emai" class="sr-only" tabindex="-1" />
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="mt-4 flex flex-col gap-3">
+            <!-- Web3Forms access key -->
+            <input type="hidden" name="access_key" value={WEB3FORMS_ACCESS_KEY} />
+
+            <!-- Optional: customize subject line -->
+            <input type="hidden" name="subject" value="New Contact Form Submission" />
+
+            <!-- Redirect after submission -->
+            <input type="hidden" name="redirect" value={`${Astro.url.origin}/contact/success/`} />
+
+            <!-- Web3Forms honeypot field for spam protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;" />
 
             <div>
                 <label for="contact-name" class="mb-1 text-black">Name</label>
@@ -48,19 +56,28 @@ import Layout from '../../layouts/Layout.astro';
                     required
                 ></textarea>
             </div>
-            
-            <button type="submit" class="focus-visible:ring-opacity-50 flex items-center justify-center gap-2 rounded-md bg-blue-600 p-2.5 text-white transition hover:bg-blue-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-600">
+
+            <button type="submit" class="focus-visible:ring-opacity-50 flex items-center justify-center gap-2 rounded-md bg-purple-800 p-2.5 text-white transition hover:bg-purple-900 focus:outline-none focus-visible:ring-2 focus-visible:ring-purple-800">
                 Send
             </button>
         </form>
+
+        <div id="form-success" class="hidden mt-4 p-4 bg-green-100 text-green-800 rounded-md text-center">
+            Message sent successfully!
+        </div>
     </div>
 </Layout>
 
 <style>
   @import "tailwindcss/theme" theme(reference);
 
+  :root {
+    --text-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+    --background-gradient: linear-gradient(270deg, #da62c4, #4f39fa);
+  }
+
   .form__input {
     @apply w-full rounded-md border border-transparent bg-gray-200 p-2.5 transition outline-none;
-    @apply focus-visible:border-blue-600/70 focus-visible:ring-2 focus-visible:ring-blue-600/50;
+    @apply focus-visible:border-purple-600/70 focus-visible:ring-2 focus-visible:ring-purple-600/50;
   }
 </style>
